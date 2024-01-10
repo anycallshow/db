@@ -27,7 +27,7 @@ COMMENT ON COLUMN "MEMBER"."SECESSION_FL" IS '탈퇴여부(Y:탈퇴, N:미탈퇴
 CREATE SEQUENCE SEQ_MEMBER_NO;
 
 INSERT INTO MEMBER
-VALUES(SEQ_MEMBER_NO.NEXTVAL, 'anycallshow', 'anycallshow@naver.com', 'qweasdzxc2', '김동휘',
+VALUES(SEQ_MEMBER_NO.NEXTVAL,'anycallshow@naver.com', 'qweasdzxc2', '김동휘',
         '01058512963', '06234,,서울특별시 강남구 테헤란로14길 6,,3층 G강의장',
         NULL, DEFAULT, DEFAULT);
         
@@ -48,6 +48,9 @@ FROM MEMBER
 WHERE MEMBER_EMAIL = 'anycallshow@naver.com'
 AND MEMBER_NICK = '김동휘'
 AND SECESSION_FL = 'N';
+
+INSERT INTO MEMBER 
+VALUES(SEQ_MEMBER_NO.NEXTVAL,?, ?, ?,?,?,NULL, DEFAULT, DEFAULT);
 
 
 
