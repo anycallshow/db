@@ -179,6 +179,16 @@ SELECT COUNT(*) FROM BOARD WHERE BOARD_CD = 2;
 -- 질문 게시판 조회
 SELECT COUNT(*) FROM BOARD WHERE BOARD_CD = 3;
 
+-- 게시판 이름 조회
+SELECT BOARD_NM FROM BOARD_TYPE
+WHERE BOARD_CD = ?;
+
+-- 특정 게시판의 전체 게시글 수 조회
+-- (단, 삭제글은 제외)
+SELECT COUNT(*) FROM BOARD 
+WHERE BOARD_CD = ?
+AND BOARD_ST = 'N';
+
 
 
 
